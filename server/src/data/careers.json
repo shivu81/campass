@@ -1,0 +1,107 @@
+[
+  {
+    "id": "software-engineer",
+    "name": "Software Engineer",
+    "interests": ["Technology", "Science", "Business"],
+    "skills": {
+      "Coding": 5,
+      "Analysis": 4,
+      "Communication": 3,
+      "Design": 2,
+      "Writing": 2
+    },
+    "personality": ["Logical", "Introvert", "Leader"],
+    "growth": "Strong demand across product companies, startups, finance, health tech, AI tooling, and enterprise platforms.",
+    "description": "Builds reliable software products, apps, APIs, and systems that solve practical problems."
+  },
+  {
+    "id": "data-scientist",
+    "name": "Data Scientist",
+    "interests": ["Technology", "Science", "Business"],
+    "skills": {
+      "Analysis": 5,
+      "Coding": 4,
+      "Communication": 3,
+      "Writing": 2,
+      "Design": 1
+    },
+    "personality": ["Logical", "Introvert", "Supporter"],
+    "growth": "Excellent future scope in AI, analytics, automation, forecasting, research, and decision intelligence.",
+    "description": "Turns data into models, insights, and predictions that help people make better decisions."
+  },
+  {
+    "id": "graphic-designer",
+    "name": "Graphic Designer",
+    "interests": ["Art", "Technology", "Business"],
+    "skills": {
+      "Design": 5,
+      "Communication": 3,
+      "Writing": 2,
+      "Analysis": 2,
+      "Coding": 1
+    },
+    "personality": ["Creative", "Introvert", "Supporter"],
+    "growth": "Growing opportunities in branding, product design, motion graphics, creator businesses, and digital marketing.",
+    "description": "Creates visual identities, campaigns, interfaces, and communication assets with strong visual taste."
+  },
+  {
+    "id": "psychologist",
+    "name": "Psychologist",
+    "interests": ["Science", "Art", "Business"],
+    "skills": {
+      "Communication": 5,
+      "Analysis": 4,
+      "Writing": 3,
+      "Design": 1,
+      "Coding": 1
+    },
+    "personality": ["Creative", "Introvert", "Supporter"],
+    "growth": "Increasing need in mental health, schools, corporate wellness, counseling platforms, and research.",
+    "description": "Helps people understand behavior, emotions, and thought patterns through assessment and support."
+  },
+  {
+    "id": "business-analyst",
+    "name": "Business Analyst",
+    "interests": ["Business", "Technology", "Science"],
+    "skills": {
+      "Analysis": 5,
+      "Communication": 4,
+      "Writing": 3,
+      "Coding": 2,
+      "Design": 1
+    },
+    "personality": ["Logical", "Extrovert", "Leader"],
+    "growth": "Strong scope in consulting, product teams, operations, fintech, SaaS, and digital transformation.",
+    "description": "Connects business needs with data, process improvements, and technical solutions."
+  },
+  {
+    "id": "teacher",
+    "name": "Teacher",
+    "interests": ["Science", "Art", "Sports", "Business"],
+    "skills": {
+      "Communication": 5,
+      "Writing": 4,
+      "Analysis": 3,
+      "Design": 2,
+      "Coding": 1
+    },
+    "personality": ["Extrovert", "Creative", "Supporter"],
+    "growth": "Stable and expanding through online learning, coaching, curriculum design, and educational technology.",
+    "description": "Guides learners, explains ideas clearly, and builds confidence through structured practice."
+  },
+  {
+    "id": "content-creator",
+    "name": "Content Creator",
+    "interests": ["Art", "Business", "Technology", "Sports"],
+    "skills": {
+      "Communication": 5,
+      "Writing": 5,
+      "Design": 3,
+      "Analysis": 2,
+      "Coding": 1
+    },
+    "personality": ["Extrovert", "Creative", "Leader"],
+    "growth": "High upside in personal branding, education, entertainment, social commerce, and niche communities.",
+    "description": "Creates written, audio, or video content that educates, entertains, and builds an audience."
+  }
+]
