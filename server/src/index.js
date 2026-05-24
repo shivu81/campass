@@ -50,7 +50,22 @@ app.post("/api/recommend", (req, res) => {
   res.json({ recommendations });
 });
 
-app.use(express.static(clientDistPath));
+app.use(
+  express.static(clientDistPath, {
+    setHeaders(res, filePath) {
+      if (filePath.endsWith(".js")) {
+        res.type("application/javascript");
+      }
+      if (filePath.endsWith(".css")) {
+        res.type("text/css");
+      }
+    }
+  })
+);
+
+app.get("/", (_req, res) => {
+  res.sendFile(path.join(clientDistPath, "index.html"));
+});
 
 app.get("*", (_req, res) => {
   res.sendFile(path.join(clientDistPath, "index.html"));
