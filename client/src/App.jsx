@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { fetchRecommendations } from "./api";
 import ChatWindow from "./components/ChatWindow";
 import Sidebar from "./components/Sidebar";
+import { createId } from "./utils/createId";
 import { createInitialMessage, formatUserAnswer, getNextPrompt, TOTAL_STEPS } from "./utils/chatFlow";
 
 const STORAGE_KEY = "career-compass-session";
@@ -14,7 +15,7 @@ const emptyProfile = {
 
 function assistantTypingMessage() {
   return {
-    id: crypto.randomUUID(),
+    id: createId(),
     role: "assistant",
     content: "",
     isTyping: true
@@ -72,7 +73,7 @@ export default function App() {
     setMessages((current) => [
       ...current,
       {
-        id: crypto.randomUUID(),
+        id: createId(),
         role: "user",
         content
       }
@@ -98,7 +99,7 @@ export default function App() {
     try {
       const data = await fetchRecommendations(nextProfile);
       const resultMessage = {
-        id: crypto.randomUUID(),
+        id: createId(),
         role: "assistant",
         type: "results",
         content:
@@ -111,7 +112,7 @@ export default function App() {
         current.map((message) =>
           message.id === typing.id
             ? {
-                id: crypto.randomUUID(),
+                id: createId(),
                 role: "assistant",
                 type: "error",
                 content: error.message

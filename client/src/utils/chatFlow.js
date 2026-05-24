@@ -1,10 +1,11 @@
 import { INTEREST_OPTIONS, PERSONALITY_STEPS, SKILL_OPTIONS } from "../data/questionFlow";
+import { createId } from "./createId";
 
 export const TOTAL_STEPS = 1 + SKILL_OPTIONS.length + PERSONALITY_STEPS.length;
 
 export function createInitialMessage() {
   return {
-    id: crypto.randomUUID(),
+    id: createId(),
     role: "assistant",
     type: "options",
     content:
@@ -22,7 +23,7 @@ export function getNextPrompt(profile, completedSteps) {
   if (nextIndex < SKILL_OPTIONS.length) {
     const skill = SKILL_OPTIONS[nextIndex];
     return {
-      id: crypto.randomUUID(),
+      id: createId(),
       role: "assistant",
       type: "rating",
       content: `Rate your ${skill.toLowerCase()} skill from 1 to 5.`,
@@ -35,7 +36,7 @@ export function getNextPrompt(profile, completedSteps) {
   if (personalityIndex < PERSONALITY_STEPS.length) {
     const item = PERSONALITY_STEPS[personalityIndex];
     return {
-      id: crypto.randomUUID(),
+      id: createId(),
       role: "assistant",
       type: "options",
       content: item.question,
@@ -46,7 +47,7 @@ export function getNextPrompt(profile, completedSteps) {
   }
 
   return {
-    id: crypto.randomUUID(),
+    id: createId(),
     role: "assistant",
     type: "analysis",
     content:
